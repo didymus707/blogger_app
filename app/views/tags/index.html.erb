@@ -3,7 +3,8 @@
   <% @tags.each do |tag| %>
     <li>
       <%= tag.name%> 
-      <%= link_to "delete", tag_path(@tag), method: :delete, data: {confirm: "Really delete the tag?"} %>   
+      <%= link_to "delete", tag_path(tag), method: :delete, data: {confirm: "Really delete the tag?"} %>   
     </li>
   <% end %>
+  <%= link_to "<< Back to Articles List", articles_path %>
 </ul>
